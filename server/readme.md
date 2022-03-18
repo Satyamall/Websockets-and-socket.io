@@ -241,12 +241,14 @@ socketServer.on("connection",socket=>{ ... })
 - now you can listen to this event from the frontend by having a listener
 
 # To all connected clients
+
 ![broadcasting](https://user-images.githubusercontent.com/80479635/159054369-f1315396-f4ca-4fc4-9ae9-37451368369b.png)
 
 ```js
 io.emit("hello", "world");
 ```
-To all connected clients except the sender
+# To all connected clients except the sender
+
 ![broadcasting2](https://user-images.githubusercontent.com/80479635/159054492-e2490c8b-3d58-4d8d-aaff-3b7eee100bc9.png)
 
 ```js
