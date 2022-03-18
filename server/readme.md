@@ -27,18 +27,18 @@ The same technique can be used for a variety of web applications:
 The Open Systems Interconnection model (OSI model) is a conceptual model that characterises and standardises the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology. Its goal is the interoperability of diverse communication systems with standard communication protocols.
 
 In the OSI reference model, the communications between a computing system are split into seven different abstraction layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
-
+![osi-model-7-layers-1](https://user-images.githubusercontent.com/80479635/159053911-4abfd605-7523-44bf-8c32-7780a7c14e4d.png)
 
 # TCP:
 
 The folloiwng image is a representation of how TCP connections are handled
 
-
+![what-is-a-tcp-3-way-handshake-process-three-way-handshaking-establishing-connection-6a724e77ba96e241](https://user-images.githubusercontent.com/80479635/159053968-155b6424-54ef-44fa-8866-0a7d182526d2.jpg)
 
 # HTTP Vs WebSockets:
 
 Comparison of how HTTP and WebSockets are handled
-
+![1_jTmCp3L3eVEG4fokeuqQZQ](https://user-images.githubusercontent.com/80479635/159054008-ac128d6f-d664-45f3-98ff-b1fc6795024d.png)
 
 # Websockets URL
 ```js
@@ -61,7 +61,7 @@ Although ws is a light weight implementation, we want to use a library that prov
 - Scale to multiple servers and send events to all connected clients with ease.
 Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.
 
-
+![bidirectional-communication2](https://user-images.githubusercontent.com/80479635/159054096-38e28e3e-5a71-4efb-b7b3-b2dabef3c0e5.png)
 
 It is built on top of the WebSocket protocol and provides additional guarantees like fallback to HTTP long-polling or automatic reconnection.
 
@@ -170,7 +170,7 @@ Now when a client connects to a server, it will print the socket id
 
 # Server Client
 The following image shows how the server talks to the client in a bi directional way
-
+![bidirectional-communication-socket](https://user-images.githubusercontent.com/80479635/159054223-8267994d-23dc-46d3-b43e-d1ea5a014b20.png)
 
 # installing on the client
 
@@ -241,13 +241,13 @@ socketServer.on("connection",socket=>{ ... })
 - now you can listen to this event from the frontend by having a listener
 
 # To all connected clients
-
+![broadcasting](https://user-images.githubusercontent.com/80479635/159054369-f1315396-f4ca-4fc4-9ae9-37451368369b.png)
 
 ```js
 io.emit("hello", "world");
 ```
 To all connected clients except the sender
-
+![broadcasting2](https://user-images.githubusercontent.com/80479635/159054492-e2490c8b-3d58-4d8d-aaff-3b7eee100bc9.png)
 
 ```js
 io.on("connection", (socket) => {
